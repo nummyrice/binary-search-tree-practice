@@ -47,9 +47,18 @@ class BinarySearchTree {
 
     search(val) {
         // Fill this in
-
+        let current = this.root;
+        while (current) {
+            if (val === current.val) {
+                return true;
+            } else if (val < current.val) {
+                current = current.left
+            } else {
+                current = current.right
+            }
+        }
+        return false;
     }
-
     preOrderTraversal() {
         // Fill this in
     }
