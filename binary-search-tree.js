@@ -32,7 +32,8 @@ class BinarySearchTree {
           } else if (node.left !== null) {
             return treeSearch(node.left);
           }
-        } else if (val > node.val) {
+        } else if (val >= node.val) {
+          // searches to the right of the tree
           if (node.right === null) {
             node.right = new TreeNode(val);
             return;
