@@ -59,16 +59,54 @@ class BinarySearchTree {
         }
         return false;
     }
-    preOrderTraversal() {
+    preOrderTraversal(node = this.root) {
         // Fill this in
+        // let tree = new BinarySearchTree();
+
+
+        if (node === null) {
+            // console.log(this.value);
+            return;
+        }
+
+
+    //   console.log("does this work");
+       console.log(node.val);
+       this.preOrderTraversal(node.left);
+        this.preOrderTraversal(node.right);
+
     }
 
-    inOrderTraversal() {
+
+    inOrderTraversal(node = this.root) {
         // Fill this in
+        if (node === null) {
+            // console.log(this.value);
+            return;
+        }
+
+
+    //   console.log("does this work");
+
+       this.inOrderTraversal(node.left);
+       console.log(node.val);
+        this.inOrderTraversal(node.right);
     }
 
-    postOrderTraversal() {
+    postOrderTraversal(node = this.root) {
         // Fill this in
+        if (node === null) {
+            // console.log(this.value);
+            return;
+        }
+
+
+    //   console.log("does this work");
+
+       this.postOrderTraversal(node.left);
+
+        this.postOrderTraversal(node.right);
+        console.log(node.val);
     }
 
 }
