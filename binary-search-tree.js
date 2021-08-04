@@ -61,35 +61,21 @@ class BinarySearchTree {
     }
     preOrderTraversal(node = this.root) {
         // Fill this in
-        // let tree = new BinarySearchTree();
-
-
         if (node === null) {
-            // console.log(this.value);
             return;
         }
-
-
-    //   console.log("does this work");
-       console.log(node.val);
-       this.preOrderTraversal(node.left);
+        console.log(node.val); //This makes it in pre order
+        this.preOrderTraversal(node.left);
         this.preOrderTraversal(node.right);
-
     }
-
 
     inOrderTraversal(node = this.root) {
         // Fill this in
         if (node === null) {
-            // console.log(this.value);
             return;
         }
-
-
-    //   console.log("does this work");
-
-       this.inOrderTraversal(node.left);
-       console.log(node.val);
+        this.inOrderTraversal(node.left);
+        console.log(node.val); //This makes it in order
         this.inOrderTraversal(node.right);
     }
 
@@ -99,14 +85,10 @@ class BinarySearchTree {
             // console.log(this.value);
             return;
         }
-
-
-    //   console.log("does this work");
-
-       this.postOrderTraversal(node.left);
-
+        // console.log("does this work");
+        this.postOrderTraversal(node.left);
         this.postOrderTraversal(node.right);
-        console.log(node.val);
+        console.log(node.val); //This makes it post order
     }
 
 }
